@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'haystack',
     'treebeard',
+    'sorl.thumbnail',
    # Default thumbnail backend, can be replaced
     'django_tables2',
 
@@ -98,7 +99,7 @@ ROOT_URLCONF = 'oscar_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
